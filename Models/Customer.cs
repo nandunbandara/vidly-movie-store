@@ -10,6 +10,11 @@ namespace Vidly.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required] //not nullable
+        [StringLength(255)] //Overriding default conventions - Data Annotations
         public String Name { get; set; }
+        public bool IsSubscribedToNewsLetter { get; set; }
+        public MembershipType MembershipType { get; set; }
+        public byte MembershipTypeId { get; set; }
     }
 }
