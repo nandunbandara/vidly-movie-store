@@ -10,13 +10,13 @@
 <table class="table">
     <tr>
         <th>Customer</th>
-        <th>Discout Rate</th>
+        <th>Membership Type</th>
     </tr>
     @foreach( var customer in Model.Customers)
     {
         <tr>
             <td>@Html.ActionLink(customer.Name, "CustomerDetails", "Customers", new { id = customer.Id }, null)</td>
-            <td>@customer.MembershipType.DiscountRate%</td>
+            <td>@customer.MembershipType.Name</td>
         </tr>
     }
 </table>
